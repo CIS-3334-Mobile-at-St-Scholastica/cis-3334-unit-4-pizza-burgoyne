@@ -60,9 +60,25 @@ public class MainActivity extends AppCompatActivity implements updateViewInterfa
     public void onClickOrder(View view) {
         // ****** Students need to add code here to get information from the UI widgets...
 
-        // ****** Students need to modify the call to OrderPizza to order the type of pizza the user selects using the UI widgets
-        String orderDescription = pizzaOrderSystem.OrderPizza("Peperoni", "large", false  );
+        //delivery check
+        pizzaOrderSystem.setDelivery(chkbxDelivery.isChecked());
 
+        //set strSize based on checked check box
+        String strSize = null;
+        if (rbSmall.isChecked())
+            strSize = "small";
+        if (rbMedium.isChecked())
+            strSize = "medium";
+        if (rbLarge.isChecked())
+            strSize = "large";
+
+        //check if extra cheese is ordered
+        boolean extraCheese = false;
+        if (chkbxCheese.isChecked())
+            extraCheese = true;
+
+        // ****** Students need to modify the call to OrderPizza to order the type of pizza the user selects using the UI widgets
+        String orderDescription = pizzaOrderSystem.OrderPizza(spinnerToppings.getSelectedItem().toString(), strSize, extraCheese);
 
         //display a pop up message for a long period of time
         Toast.makeText(getApplicationContext(), "You have ordered a "+orderDescription , Toast.LENGTH_LONG).show();

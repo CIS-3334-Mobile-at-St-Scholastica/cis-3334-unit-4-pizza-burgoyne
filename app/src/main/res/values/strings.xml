@@ -6,6 +6,7 @@
     <string-array name="toppings">
         <item>Pepperoni</item>
         <item>Chicken</item>
-        <item>Vegitarian</item>
+        <item>Hawaiian</item>
+        <item>Vegetarian</item>
     </string-array>
 </resources>
