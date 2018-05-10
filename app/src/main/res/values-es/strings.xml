@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Pedido de Pizza</string>
+    <string name="small_pizza">Pizza Pequeña</string>
+    <string name="mediumpizza">Pizza Mediana</string>
+    <string name="large_pizza">Grande Pizza</string>
+    <string-array name="toppings">
+        <item>Pepperoni</item>
+        <item>Pollo</item>
+        <item>Hawaiano</item>
+        <item>Vegetariano</item>
+    </string-array>
+</resources>
